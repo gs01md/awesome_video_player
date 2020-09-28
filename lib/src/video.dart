@@ -207,9 +207,9 @@ class _AwsomeVideoPlayerState extends State<AwsomeVideoPlayer>
     controller.dispose();
 
     ///竖屏
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-    ]);
+//    SystemChrome.setPreferredOrientations([
+//      DeviceOrientation.portraitUp,
+//    ]);
     Screen.keepOn(false);
     subscription.cancel();
     super.dispose();
