@@ -635,6 +635,9 @@ class _AwsomeVideoPlayerState extends State<AwsomeVideoPlayer>
 
   @override
   Widget build(BuildContext context) {
+
+    OrientationPlugin.forceOrientation(DeviceOrientation.landscapeRight);
+
     /// Video children
     final videoChildrens = <Widget>[
       /// 视频区域
