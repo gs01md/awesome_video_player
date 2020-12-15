@@ -332,11 +332,11 @@ class _AwsomeVideoPlayerState extends State<AwsomeVideoPlayer>
 
   /// 点击全屏或取消
   void toggleFullScreen() {
-    if (fullscreened) {
-      OrientationPlugin.forceOrientation(DeviceOrientation.portraitUp);
-    } else {
+    //if (fullscreened) {
+      //OrientationPlugin.forceOrientation(DeviceOrientation.portraitUp);
+    //} else {
       OrientationPlugin.forceOrientation(DeviceOrientation.landscapeRight);
-    }
+    //}
   }
 
   /// 显示或隐藏菜单栏
