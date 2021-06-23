@@ -113,7 +113,7 @@ class _VideoScrubberState extends State<_VideoScrubber> {
       behavior: HitTestBehavior.opaque,
       child: widget.child,
       onHorizontalDragStart: (DragStartDetails details) {
-        if (!controller.value.isInitialized) {
+        if (!controller.value.initialized) {
           return;
         }
         _controllerWasPlaying = controller.value.isPlaying;
@@ -122,7 +122,7 @@ class _VideoScrubberState extends State<_VideoScrubber> {
         }
       },
       onHorizontalDragUpdate: (DragUpdateDetails details) {
-        if (!controller.value.isInitialized) {
+        if (!controller.value.initialized) {
           return;
         }
         emitDragUpdate(details.globalPosition);
@@ -134,7 +134,7 @@ class _VideoScrubberState extends State<_VideoScrubber> {
         }
       },
       onTapDown: (TapDownDetails details) {
-        if (!controller.value.isInitialized) {
+        if (!controller.value.initialized) {
           return;
         }
         seekToRelativePosition(details.globalPosition);
@@ -171,7 +171,7 @@ class _ProgressBarPainter extends CustomPainter {
       ),
       Paint()..color = style.backgroundColor,
     );
-    if (!value.isInitialized) {
+    if (!value.initialized) {
       return;
     }
     final double playedPartPercent =
